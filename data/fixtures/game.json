@@ -1,0 +1,10 @@
+{
+  "objective": "Reach the tent before the storm.",
+  "legal_moves": {
+    "walk": "Move one step toward the tent.",
+    "retreat": "Step back from the rising creek.",
+    "wait": "Stay put."
+  },
+  "state_safe": "You are on the trail. The creek is low. The tent is ahead.",
+  "state_danger": "The creek is over the trail at your feet. The tent is ahead."
+}

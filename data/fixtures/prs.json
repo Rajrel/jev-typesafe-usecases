@@ -1,0 +1,14 @@
+[
+  {
+    "id": "PR-18",
+    "title": "Fix checkout timeout",
+    "body": "Retry the payment call once when checkout times out.",
+    "diff_summary": "Adds a single retry in checkout/payment.py and a unit test for that retry."
+  },
+  {
+    "id": "PR-19",
+    "title": "Cleanup",
+    "body": "Small tidy of comments.",
+    "diff_summary": "Rewrites auth/session.py, deletes the old token helper, and also changes the CI deploy config. No tests."
+  }
+]

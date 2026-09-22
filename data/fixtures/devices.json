@@ -1,0 +1,9 @@
+{
+  "devices": {"lamp": "The lamp", "kettle": "The kettle", "none": "No device"},
+  "actions": {"turn_on": "Turn it on", "turn_off": "Turn it off", "none": "No action"},
+  "rooms": {"kitchen": "Kitchen", "loft": "Loft", "unspecified": "No room given"},
+  "commands": [
+    "Turn on the kitchen kettle",
+    "What time does the store open?"
+  ]
+}

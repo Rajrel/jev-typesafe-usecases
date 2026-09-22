@@ -1,0 +1,18 @@
+{
+  "text": "Invoice INV-2044\nBilled to Acme Holdings\nAmount due: $240.00\nA second figure, $12.00, is the shipping line.\nPayment terms: net 30\nDue date: October 15, 2026\n",
+  "canned_extract": {
+    "invoice_number": "INV-2044",
+    "customer_name": "Acme Holdings",
+    "amount_due": "12.00",
+    "payment_terms": "net 30"
+  },
+  "name_candidates": ["Acme Holdings", "Northwind Outfitters", "Beaver Logistics"],
+  "po_lines": [
+    {"description": "40L weekend backpack with rain cover", "amount": 120},
+    {"description": "40L weekend backpack with rain cover", "amount": 120}
+  ],
+  "invoice_lines": [
+    {"description": "40L backpack, rain cover included", "amount": 120},
+    {"description": "40L backpack, second unit", "amount": 120}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "Sporting Goods": {
+    "Cycling": ["Bike Bottles", "Helmets"],
+    "Outdoor": ["Tents", "Packs"],
+    "Fitness": ["Yoga", "Bands"]
+  },
+  "Home & Kitchen": {
+    "Drinkware": ["Travel Mugs", "Everyday Bottles"],
+    "Cookware": ["Sheet Pans"]
+  },
+  "Baby & Toddler": ["Sippy Cups"]
+}

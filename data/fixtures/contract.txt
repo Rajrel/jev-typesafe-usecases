@@ -1,0 +1,9 @@
+1. Parties. This agreement is between Northwind Outfitters and Acme Holdings.
+
+2. Payment. Acme pays invoices within 30 days of the invoice date.
+
+3. Returns. Wholesale returns need written approval and must be requested within 30 days.
+
+4. Liability. Northwind's liability is limited to the amount paid on the order.
+
+5. Notices. Send notices to ops@northwind.example.

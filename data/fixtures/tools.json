@@ -1,0 +1,32 @@
+{
+  "roster": {
+    "lookup_order": "Read an order's status, total, and items. Does not change anything.",
+    "refund_order": "Send a refund for an order after a person approves it.",
+    "cancel_order": "Cancel an order that has not shipped.",
+    "reset_password": "Email a password reset link to the address on file.",
+    "search_products": "Answer a question about a product from the catalog.",
+    "page_oncall": "Page the infra on-call for a production outage."
+  },
+  "calls": [
+    {
+      "name": "lookup_order",
+      "arguments": {"order_id": "A-118"},
+      "request": "Where is order A-118?"
+    },
+    {
+      "name": "refund_order",
+      "arguments": {"order_id": "A-118"},
+      "request": "Where is order A-118?"
+    }
+  ],
+  "schema": {
+    "name": "lookup_order",
+    "properties": {
+      "order_id": {"type": "string", "description": "Order id such as A-118"}
+    }
+  },
+  "issue_requests": [
+    "File a bug on the checkout repo. Customers get 500s and it is blocking.",
+    "Show me the open issues. Do not file a new one."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "app_lines": [
+    "INFO checkout request id=9 accepted",
+    "ERROR payment service returned 500 for order A-104 after deploy",
+    "DEBUG cache key hit for product BTL-32",
+    "WARN label printer 2 jam, reprint queued"
+  ],
+  "ci_jobs": [
+    {
+      "name": "unit",
+      "log_tail": "AssertionError: checkout total expected 98 got 49 in payment.py",
+      "diff_files": ["checkout/payment.py"]
+    },
+    {
+      "name": "integration",
+      "log_tail": "No space left on device. Runner lost connection before tests started.",
+      "diff_files": ["README.md"]
+    }
+  ],
+  "migrations": [
+    {
+      "name": "add_gift_note",
+      "sql": "ALTER TABLE orders ADD COLUMN gift_note TEXT;"
+    },
+    {
+      "name": "drop_phone",
+      "sql": "ALTER TABLE customers DROP COLUMN phone; ALTER TABLE orders ALTER COLUMN status SET NOT NULL;"
+    }
+  ],
+  "config_changes": [
+    {"key": "site.tagline", "change": "Updated the footer tagline."},
+    {"key": "payments.live_key", "change": "Replaced the production payment key and opened the database to a new IP."}
+  ]
+}

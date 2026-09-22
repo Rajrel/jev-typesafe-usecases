@@ -1,0 +1,29 @@
+{
+  "prompts": [
+    {"id": "public", "text": "How long is the posted refund window?"},
+    {"id": "internal", "text": "Summarize unreleased project Harbor and the Acme Holdings contract terms."}
+  ],
+  "documents": [
+    {"name": "tagline", "text": "Northwind Outfitters. Gear for weekends outside."},
+    {"name": "customer-export", "text": "Maya Chen, maya.chen@example.com, order A-104, key sk-test-not-a-real-key"}
+  ],
+  "tasks": [
+    "Read the status of order A-118 and tell the shopper.",
+    "Cancel order A-290 and email the shopper that it was cancelled."
+  ],
+  "business_units": {
+    "retail_support": "Shopper questions, orders, and returns",
+    "wholesale": "Acme and other company accounts",
+    "infra": "Deploys, checkout errors, and on-call",
+    "unattributed": "Cannot tell from the request"
+  },
+  "dispute": {
+    "cardholder_statement": "I was charged twice for one bottle. I only agreed to one $49 charge.",
+    "merchant_evidence": "Order A-104 shows two identical $49 bottle lines posted on the same day.",
+    "reason_codes": {
+      "duplicate": "The cardholder was billed twice for one purchase.",
+      "not_received": "The cardholder says the goods never arrived.",
+      "not_as_described": "The goods arrived but were not what was sold."
+    }
+  }
+}

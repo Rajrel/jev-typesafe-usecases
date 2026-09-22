@@ -1,0 +1,37 @@
+{
+  "copy": [
+    "The 40L pack includes a rain cover. It ships in 5 business days.",
+    "The fastest and best pack on earth. We guarantee Friday delivery and we beat RidgeLine on every trip."
+  ],
+  "translations": [
+    {"source": "Your order {order_id} has shipped.", "translation": "Tu pedido {order_id} ha sido enviado."},
+    {"source": "Your order {order_id} has shipped.", "translation": "Tu pedido ha sido enviado."}
+  ],
+  "alt_text": [
+    {"alt_text": "Green 40L backpack with the rain cover clipped on.", "image_description": "A green weekend backpack with a rain cover."},
+    {"alt_text": "image", "image_description": "A green weekend backpack with a rain cover."}
+  ],
+  "filings": [
+    "Northwind Outfitters sells tents, packs, and bike bottles through its own website.",
+    "A company report that mentions both a retail shop and a small trucking fleet."
+  ],
+  "reviews": [
+    "The bottle is sturdy but $18 feels high.",
+    "The zipper broke on day two. I would not recommend it.",
+    "Better than my old pack from another brand. I would buy it again."
+  ],
+  "feature_description": "Shoppers can save a helmet size on their account.",
+  "feature_tickets": [
+    "The new saved helmet size keeps forgetting what I picked. This is confusing.",
+    "Where is my tent tracking?",
+    "Saving my helmet size worked the first time. Happy with it."
+  ],
+  "flattened_lines": [
+    "Refund policy",
+    "Northwind accepts returns for 30",
+    "days after purchase.",
+    "- Duplicate charges are refundable",
+    "```",
+    "order_id = A-104"
+  ]
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "AL-1",
+    "text": "Checkout is returning HTTP 500 after the Friday payment deploy. Shoppers cannot pay."
+  },
+  {
+    "id": "AL-2",
+    "text": "Warehouse printer 2 jammed on a large shipping label. One bench only."
+  }
+]

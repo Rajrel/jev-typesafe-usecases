@@ -1,0 +1,92 @@
+{
+  "memory_chunks": [
+    "We agreed the extra $49 charge on A-104 will be refunded.",
+    "The shopper mentioned it was raining.",
+    "API key in the note: sk-test-not-a-real-key",
+    "Tent color is green."
+  ],
+  "current_goal": "Finish the duplicate-charge refund for order A-104.",
+  "completions": [
+    {
+      "request": "Refund the extra $49 on A-104.",
+      "final_answer": "I refunded the extra $49 charge on A-104. Nothing is left pending."
+    },
+    {
+      "request": "Refund the extra $49 on A-104.",
+      "final_answer": "I looked at the order. I still need to submit the refund."
+    }
+  ],
+  "claims": [
+    {
+      "text": "Duplicate charges are eligible for a refund.",
+      "source_text": "Duplicate charges are eligible for a refund of the extra charge."
+    },
+    {
+      "text": "Orders can be refunded for a full year.",
+      "source_text": "Northwind Outfitters accepts returns for 30 days after the purchase date."
+    }
+  ],
+  "handoffs": [
+    {
+      "to": "builder",
+      "message": "Write the refund reply. The extra charge is $49 on order A-104. Done when the reply states the amount and the order id."
+    },
+    {
+      "to": "builder",
+      "message": "Handle the tent thing."
+    }
+  ],
+  "plan_steps": [
+    {
+      "plan_step": "Look up order A-104 and confirm two $49 charges.",
+      "what_happened": "lookup_order returned A-104 with two $49 bike bottle lines.",
+      "next_plan_step": "Queue the refund of one $49 charge."
+    },
+    {
+      "plan_step": "Look up order A-104 and confirm two $49 charges.",
+      "what_happened": "Sent a marketing email about October trails.",
+      "next_plan_step": "Queue the refund of one $49 charge."
+    }
+  ],
+  "subagent_answers": {
+    "a": "The extra charge is a duplicate $49 bike bottle.",
+    "b": "The extra charge is a $189 tent.",
+    "evidence": "Order A-104 lines are two 32oz bike bottles at $49 each."
+  },
+  "tool_results": [
+    {"call": "lookup_order A-118", "output": "A-118 for Luis Ortega: shipped, $189.00, tent."},
+    {"call": "lookup_order A-118", "output": "Please log in to continue. Session expired."}
+  ],
+  "ambiguous": "Can you check the pack?",
+  "interpretations": {
+    "order_status": "The shopper wants the status of a backpack order.",
+    "product_question": "The shopper wants to know if the 40L pack is waterproof."
+  },
+  "traces": [
+    {
+      "spec": "Reply with the order status only.",
+      "trace": "Called lookup_order for A-118 and used the shipped status in the answer.",
+      "final_answer": "Order A-118 has shipped."
+    },
+    {
+      "spec": "Reply with the order status only.",
+      "trace": "Called search_products and did not look up the order.",
+      "final_answer": "I think it might have shipped, but I am not sure and cannot say."
+    }
+  ],
+  "prompt_outputs": {
+    "v1": [
+      "Order A-118 shipped.",
+      "I refunded the extra charge."
+    ],
+    "v2": [
+      "Sorry! Here is a long note.\n- shipped\n- tracking later\n- please wait",
+      "Sorry I cannot tell you the status yet. Can you confirm the order id?"
+    ]
+  },
+  "loop_steps": [
+    "lookup_order A-104",
+    "lookup_order A-104",
+    "lookup_order A-104"
+  ]
+}
