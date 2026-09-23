@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import os
+import warnings
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -69,9 +70,10 @@ def _classifier():
     if not typesafe_ready():
         print("skipped: set TYPESAFE_API_KEY in .env")
         return None
-    from langchain_typesafe import TypeSafeClassifier
-
-    return TypeSafeClassifier(model=jev_model(), base_url=typesafe_base_url())
+    with warnings.catch_warnings():
+        warnings.filterwarnings("ignore", category=Warning, message=".*beta.*")
+        from langchain_typesafe import TypeSafeClassifier
+        return TypeSafeClassifier(model=jev_model(), base_url=typesafe_base_url())
 
 
 def ask(state, questions):
